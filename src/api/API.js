@@ -24,3 +24,5 @@ class API extends Request {
     }
   }
 }
+
+export default new API()
