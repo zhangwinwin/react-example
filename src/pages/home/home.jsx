@@ -4,6 +4,9 @@ import API from '@/api/API'
 import { connect } from 'react-redux'
 import { is, fromJS } from 'immutable'
 import env from '@/env'
+import { saveFormData, saveImg, clearData } from '@/store/home/action'
+import { clearSelectd } from '@/store/production/action'
+import Pubilcheader from '@/component/header/header'
 
 class Home extends Component {
   static propTypes = {
@@ -105,9 +108,18 @@ class Home extends Component {
   componentWillMount(){
     this.initData(this.props)
   }
+  
   render () {
     return (
-      <main className="home-container">
+      <main className='home-container'>
+        <Pubilcheader title="首页" record>
+          <p className="common-title">请录入您的信息</p>
+          <form className="home-form">
+            <div className="home-form">
+
+            </div>
+          </form>
+        </Pubilcheader>
       </main>
     )
   }
