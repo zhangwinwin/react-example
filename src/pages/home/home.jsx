@@ -108,18 +108,18 @@ class Home extends Component {
   componentWillMount(){
     this.initData(this.props)
   }
-  
+
   render () {
     return (
-      <main className='home-container'>
-        <Pubilcheader title="首页" record>
-          <p className="common-title">请录入您的信息</p>
-          <form className="home-form">
-            <div className="home-form">
-
-            </div>
-          </form>
-        </Pubilcheader>
+      <main className="home-container">
+        <PubilcHeader title='首页' record />
+        <p className='common-title'>请录入您的信息</p>
+        <form className="home-form">
+          <div className='home-form-tiem'>
+            <span>销售金额:</span>
+            <input type="text" placeholder="请输入订单金额" />
+          </div>
+        </form>
       </main>
     )
   }
