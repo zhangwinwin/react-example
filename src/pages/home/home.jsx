@@ -117,7 +117,15 @@ class Home extends Component {
         <form className="home-form">
           <div className='home-form-tiem'>
             <span>销售金额:</span>
-            <input type="text" placeholder="请输入订单金额" />
+            <input type="text" placeholder="请输入订单金额" value={this.props.formData.orderSum} onChange={this.handleInput.bind(this, 'orderSum')}/>
+          </div>
+          <div className="home-form-tiem">
+            <span>客户姓名：</span>
+            <input type="text" placeholder="请输入客户姓名" value={this.props.formData.name} onChange={this.handleInput.bind(this, 'name')}/>
+          </div>
+          <div className="home-form-tiem">
+            <span>客户电话：</span>
+            <input type="text" maxLength="13" placeholder="请输入客户电话" value={this.props.formData.phoneNo} onChange={this.handleInput.bind(this, 'phoneNo')}/>
           </div>
         </form>
       </main>
